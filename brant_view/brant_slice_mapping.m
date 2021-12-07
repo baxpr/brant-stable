@@ -40,4 +40,5 @@ if draw_param.white_background == 1
 else
     set(gcf, 'color', 'black');
 end
+set(gcf, 'invertHardCopy', 'off');
 brant_draw_slice(background_file, draw_param, vol_file);

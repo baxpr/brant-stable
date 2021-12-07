@@ -121,8 +121,8 @@ function [CData, c_map, cbr] = brant_get_slice_color(background_data, vol_data, 
 %% create colormap
 
 vol_int = single(vol_data.img);
-min_vol = min(unique(vol_int(:)));
-max_vol = max(unique(vol_int(:))); 
+min_vol = min(unique(vol_data.img(:)));
+max_vol = max(unique(vol_data.img(:))); 
 abs_max_vq = max(abs(min_vol), abs(max_vol));
 color_N = 513;
 num_thr = numel(draw_param.vol_thr);
