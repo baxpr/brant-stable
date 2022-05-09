@@ -25,8 +25,10 @@ if (is4d_ind == 0)
 end
 
 switch(computer('arch'))
-    case {'win64', 'win32'}
+    case 'win32'
         ba_full = fullfile(bn_path, 'BN.win32');
+    case 'win64'
+        ba_full = fullfile(bn_path, 'BN.win64');
     case 'glnxa64'
         ba_full = fullfile(bn_path, 'BN.unix64');
     otherwise
