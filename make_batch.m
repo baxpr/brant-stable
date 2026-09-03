@@ -14,7 +14,7 @@ gui_parameters{1}.subj.spm.dirs = '';
 gui_parameters{1}.subj.filetype = 'fmri.nii';
 gui_parameters{1}.subj.is4d = 1;
 gui_parameters{1}.subj.out.selected = 0;
-gui_parameters{1}.subj.out.dir = [pwd '/OUTPUTS'];
+gui_parameters{1}.subj.out.dir = [pwd '/OUTPUTS'];  % called wkdir in GUI
 gui_parameters{1}.subj.out.nmpos = 1;
 
 % Options
