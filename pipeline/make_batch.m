@@ -1,9 +1,9 @@
 
 %% Copy files to work dir and get scan-specific information
-copyfile([pwd '/INPUTS/fmri.*'],'OUTPUTS');
-copyfile([pwd '/INPUTS/t1.*'],'OUTPUTS');
+copyfile([pwd '/../INPUTS/fmri.*'],'../OUTPUTS');
+copyfile([pwd '/../INPUTS/t1.*'],'../OUTPUTS');
 
-fid = fopen([pwd '/OUTPUTS/fmri.json'], 'r');
+fid = fopen([pwd '/../OUTPUTS/fmri.json'], 'r');
 jstr = fread(fid, '*char').';
 fclose(fid);
 fmri_info = jsondecode(jstr);
@@ -12,7 +12,7 @@ fmri_trsec = fmri_info.RepetitionTime;
 
 
 %% Configure BRANT variables for preprocessing
-batch_file = [pwd '/OUTPUTS/brant_Preprocessing.mat'];
+batch_file = [pwd '/../OUTPUTS/brant_Preprocessing.mat'];
 gui_fn = 'brant_Preprocessing';
 gui_func = @brant_preprocess_jobman;
 gui_version = '3.37';
@@ -23,11 +23,11 @@ clear gui_parameters
 % Inputs
 gui_parameters{1}.subj.text.inputfile = '';
 gui_parameters{1}.subj.text.dirs = '';
-gui_parameters{1}.subj.spm.dirs = {[pwd '/OUTPUTS']};  % fmri input file dir?
+gui_parameters{1}.subj.spm.dirs = {[pwd '/../OUTPUTS']};  % fmri input file dir?
 gui_parameters{1}.subj.filetype = 'fmri.nii';  % fmri filename pattern
 gui_parameters{1}.subj.is4d = 1;
 gui_parameters{1}.subj.out.selected = 0;
-gui_parameters{1}.subj.out.dir = [pwd '/OUTPUTS'];  % called wkdir in GUI
+gui_parameters{1}.subj.out.dir = [pwd '/../OUTPUTS'];  % called wkdir in GUI
 gui_parameters{1}.subj.out.nmpos = 1;  % Frame within nifti?
 
 % Options
