@@ -23,7 +23,7 @@ clear gui_parameters
 % Inputs
 gui_parameters{1}.subj.text.inputfile = '';
 gui_parameters{1}.subj.text.dirs = '';
-gui_parameters{1}.subj.spm.dirs = {[pwd '/../OUTPUTS']};  % fmri input file dir?
+gui_parameters{1}.subj.spm.dirs = {[pwd '/../OUTPUTS']};  % fmri input file dir
 gui_parameters{1}.subj.filetype = 'fmri.nii';  % fmri filename pattern
 gui_parameters{1}.subj.is4d = 1;
 gui_parameters{1}.subj.out.selected = 0;
