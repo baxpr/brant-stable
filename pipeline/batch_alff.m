@@ -14,7 +14,7 @@ fprintf('Found TR = %0.3f sec for fmri\n',fmri_trsec);
 
 
 %% Configure BRANT variables for SPON processing
-batch_file = fullfile(out_dir,'/brant_ALFF_fALFF.mat');
+batch_file = fullfile(out_dir,'brant_ALFF_fALFF.mat');
 gui_fn = 'ALFF/fALFF';
 gui_func = @brant_alff;
 gui_version = '3.37';
