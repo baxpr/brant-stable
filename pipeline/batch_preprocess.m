@@ -19,6 +19,7 @@ fclose(fid);
 fmri_info = jsondecode(jstr);
 
 fmri_trsec = fmri_info.RepetitionTime;
+fprintf('Found TR = %0.3f sec for %s\n',fmri_trsec,fmri_nii);
 
 
 %% Configure BRANT variables for preprocessing
